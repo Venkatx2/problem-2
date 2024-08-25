@@ -1,0 +1,5 @@
+def track_inventory(product_id, warehouse_id):
+    # Fetch current stock level from database or API
+    current_stock = get_current_stock(product_id, warehouse_id)
+    if current_stock < safety_stock_threshold:
+        alert_low_stock(product_id, warehouse_id)
